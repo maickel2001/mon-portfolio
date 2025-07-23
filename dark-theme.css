@@ -1,0 +1,92 @@
+/* Thème Sombre - Fichier optionnel */
+/* Ajoutez cette ligne dans le head de index.html si vous voulez le thème sombre :
+   <link rel="stylesheet" href="dark-theme.css"> */
+
+.dark-theme {
+    --primary-color: #3b82f6;
+    --secondary-color: #2563eb;
+    --accent-color: #60a5fa;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --background: #111827;
+    --background-secondary: #1f2937;
+    --border-color: #374151;
+    --success-color: #34d399;
+    --warning-color: #fbbf24;
+    --error-color: #f87171;
+}
+
+.dark-theme .navbar {
+    background-color: rgba(17, 24, 39, 0.95);
+    border-bottom-color: var(--border-color);
+}
+
+.dark-theme .hero {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+.dark-theme .service-card,
+.dark-theme .project-card,
+.dark-theme .skill-item,
+.dark-theme .contact-form {
+    background: var(--background-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.dark-theme .nav-menu {
+    background-color: var(--background);
+}
+
+.dark-theme .tech-tag {
+    background: var(--background);
+    color: var(--accent-color);
+}
+
+.dark-theme .social-link {
+    background: var(--background);
+}
+
+.dark-theme .form-group input,
+.dark-theme .form-group textarea {
+    background: var(--background);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.dark-theme .form-group input:focus,
+.dark-theme .form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* Bouton de toggle thème */
+.theme-toggle {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 1000;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-50%) scale(1.1);
+    background: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
